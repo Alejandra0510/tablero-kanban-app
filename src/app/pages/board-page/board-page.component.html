@@ -1,0 +1,16 @@
+<div class="min-h-screen bg-base-200 text-base-content">
+  <!-- Navbar -->
+  <navbar-board-component />
+
+  <!-- Encabezado -->
+  <div class="px-8 pt-5">
+    <h1 class="text-3xl font-extrabold">Proyecto principal</h1>
+    <p class="text-sm font-semibold opacity-70 mt-1">7 tareas en total</p>
+  </div>
+
+  <!-- Columnas -->
+  <div class="flex gap-4 px-8 pt-4 pb-8 items-center">
+    <atasks-list-component [columns]="columns()"/>
+  </div>
+</div>
+<footer-board-component />

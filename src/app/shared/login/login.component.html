@@ -1,0 +1,48 @@
+<div class="min-h-screen grid lg:grid-cols-1 bg-base-200 text-base-content">
+  <!-- Formulario -->
+  <div class="flex items-center justify-center p-6">
+    <form class="card w-full max-w-md bg-base-100 shadow-x" autocomplete="off" [formGroup]="formLogin" (ngSubmit)="onSave()">
+      <div class="card-body gap-5">
+        <div>
+          <h2 class="text-3xl font-extrabold">Iniciar sesión</h2>
+          <p class="text-sm opacity-70">Ingresa tus datos para continuar.</p>
+        </div>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Correo electrónico</legend>
+          <input type="email"
+                 class="input w-full"
+                 [class.input-error]="formUtils.isValideField(formLogin, 'email')"
+                 placeholder="correo@ejemplo.com"
+                 formControlName="email" />
+
+          @if (formUtils.isValideField(formLogin, "email")) {
+            <span class="form-text text-error">
+                {{ formUtils.getFieldError(formLogin, "email") }}
+            </span>
+          }
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Contraseña</legend>
+          <input type="password"
+                 class="input w-full"
+                 placeholder="••••••••"
+                 [class.input-error]="formUtils.isValideField(formLogin, 'password')"
+                 formControlName="password" />
+
+          @if (formUtils.isValideField(formLogin, "password")) {
+            <span class="form-text text-error">
+                {{ formUtils.getFieldError(formLogin, "password") }}
+            </span>
+          }
+        </fieldset>
+
+        <button type="submit"
+                class="btn btn-primary w-full">
+          Entrar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
