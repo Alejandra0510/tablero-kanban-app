@@ -3,3 +3,10 @@
 @plugin "daisyui" {
   themes: cupcake --default;
 }
+
+
+.priority{
+  width: calc(var(--spacing) * 8);
+  border-radius: calc(infinity * 1px);
+  font-size: 9.5px;
+}

@@ -1,4 +1,4 @@
-<div class="min-h-screen bg-base-200 text-base-content">
+<div class="min-h-screen bg-base-200 text-base-content overflow-x-hidden">
   <!-- Navbar -->
   <navbar-board-component />
 
@@ -9,7 +9,7 @@
   </div>
 
   <!-- Columnas -->
-  <div class="flex gap-4 px-8 pt-4 pb-8 items-center">
+  <div class="overflow-x-auto">
     <atasks-list-component [columns]="columns()"/>
   </div>
 </div>
